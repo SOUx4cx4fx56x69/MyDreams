@@ -44,15 +44,29 @@ for(unsigned short i =0;hash[i];i++)
 *string++='\0';
 }
 
-void final(char*string)
+void final(unsigned char*string)
 {
-
+ first(string);
+ second(string);
+ char tmp[strlen(string)];
+ unsigned short counter=0;
+while(*string)
+{
+ tmp[counter++]=(*string % 16)+'0';
+ *string= *string/16;
+ *string++;
+}
+tmp[counter++]='\0';
+for(counter;counter--;)
+ *string--=tmp[counter];
 }
 
 void main(void)
 {
-unsigned char * buffer = strdup("Test String");
+unsigned char * buffer = strdup("Test Stringsss33sasdfassdf");
 first(buffer);
 second(buffer);
+final(buffer);
+final(buffer);
 printf("Result: %s\n",buffer);
 }
