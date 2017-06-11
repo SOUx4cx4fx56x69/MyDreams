@@ -63,10 +63,9 @@ for(counter;counter--;)
 
 void main(void)
 {
-unsigned char * buffer = strdup("Test Stringsss33sasdfassdf");
+unsigned char * buffer = strdup("Test String");
 first(buffer);
 second(buffer);
-final(buffer);
 final(buffer);
 printf("Result: %s\n",buffer);
 }
