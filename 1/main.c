@@ -6,7 +6,7 @@
 #include <openssl/x509.h>
 #include <openssl/evp.h>
 #include <openssl/sha.h>
-
+//shitcode one love, so it dream(sleap)
 void block_(char*string,unsigned char*result,unsigned char*result1,unsigned long * counter)
 {
  while(*string)
